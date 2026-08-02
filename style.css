@@ -1,0 +1,554 @@
+/* ==================== ESTILOS GENERALES ====================*/
+:root {
+    --color-dorado: #cfb050;
+    --color-gris: #3b4049;
+    --color-rosa: #e84b89;
+    --fuente-titulo: 'Dancing Script', cursive;
+    --fuente-texto: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    background: #fff;
+    color: var(--color-gris);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* ==================== HERO SECTION ====================*/
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(207, 176, 80, 0.55), rgba(212, 165, 116, 0.55)),
+        url('Imagenes/6.jpg') center/cover no-repeat;
+    background-position: 50% 68%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: white;
+    filter: grayscale(100%);
+    transition: filter 0.45s ease;
+}
+
+.hero:hover {
+    filter: grayscale(0%);
+}
+
+.hero .container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 28px;
+}
+
+.hero #countdown {
+    justify-content: flex-start;
+}
+
+.hero .mt-4 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hero h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 88px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitulo {
+    font-family: var(--fuente-texto);
+    font-size: 42px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.fecha-evento {
+    font-size: 26px;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 30px;
+}
+
+/* COUNTDOWN */
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.caja {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 80px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.caja span {
+    display: block;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+}
+
+.caja small {
+    display: block;
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    margin-top: 5px;
+}
+
+/* ==================== SECCIONES GENERALES ====================*/
+.seccion {
+    padding: 60px 20px;
+}
+
+.seccion h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 48px;
+    color: var(--color-gris);
+    margin-bottom: 30px;
+}
+
+.fondo-claro {
+    background: white;
+}
+
+.fondo-oscuro {
+    background: #f5f5f5;
+    color: var(--color-gris);
+}
+
+.gracias {
+    position: relative;
+    overflow: hidden;
+    background: url('Imagenes/1348.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.gracias::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.gracias > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.gracias h2,
+.gracias .texto-agradecimiento {
+    color: white;
+}
+
+/* ==================== ELEMENTOS COMUNES ====================*/
+.titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 24px;
+    color: var(--color-rosa);
+    margin: 20px 0 10px 0;
+}
+
+.img-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 18%;
+    margin: 20px auto;
+    border: 5px solid var(--color-dorado);
+}
+
+.texto-bienvenida {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.img-buzon {
+    max-width: 400px;
+    border-radius: 15px;
+    margin: 20px auto;
+        background: transparent;
+        display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-personal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(207, 176, 80, 0.3);
+    color: white;
+}
+
+.btn-musica {
+    background: linear-gradient(135deg, var(--color-rosa), #d84379);
+}
+
+.btn-musica:hover {
+    box-shadow: 0 8px 20px rgba(232, 75, 137, 0.3);
+}
+
+/* ==================== LUGAR Y FECHA ====================*/
+.card-lugar {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin: 30px 0;
+    text-align: center;
+}
+
+.card-lugar h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 28px;
+    color: var(--color-rosa);
+    margin-bottom: 15px;
+}
+
+.card-lugar p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* ==================== ITINERARIO ====================*/
+.timeline-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.timeline-item i {
+    font-size: 48px;
+    color: var(--color-rosa);
+    margin-bottom: 15px;
+}
+
+.timeline-item .timeline-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 15px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(56%) sepia(61%) saturate(1436%) hue-rotate(300deg) brightness(103%) contrast(101%);
+}
+
+.timeline-item h4 {
+    font-family: var(--fuente-titulo);
+    font-size: 22px;
+    color: var(--color-gris);
+    margin: 10px 0;
+}
+
+.timeline-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* ==================== CÓDIGO DE VESTIMENTA ====================*/
+.icono-vestimenta {
+    font-size: 70px;
+    color: var(--color-rosa);
+    margin: 20px 0;
+}
+
+.aviso-importante {
+    background: #dd99be;
+    border-left: 4px solid var(--color-dorado);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: center;
+    color: var(--color-gris);
+}
+
+/* ==================== GALERÍA ====================*/
+.card-galeria {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.card-galeria:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+body.gallery-open {
+    overflow: hidden;
+}
+
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 2000;
+}
+
+.gallery-lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.gallery-lightbox__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+}
+
+.gallery-lightbox__panel {
+    position: relative;
+    z-index: 1;
+    width: min(92vw, 1100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-lightbox__image {
+    display: block;
+    width: 100%;
+    max-height: 84vh;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    background: #111;
+}
+
+.gallery-lightbox__close,
+.gallery-lightbox__nav {
+    position: absolute;
+    border: none;
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+}
+
+.gallery-lightbox__close:hover,
+.gallery-lightbox__nav:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.gallery-lightbox__close {
+    top: -14px;
+    right: -14px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.gallery-lightbox__nav {
+    top: 50%;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    z-index: 2;
+}
+
+.gallery-lightbox__nav:hover {
+    transform: translateY(-50%) scale(1.05);
+}
+
+.gallery-lightbox__prev {
+    left: -72px;
+}
+
+.gallery-lightbox__next {
+    right: -72px;
+}
+
+@media (max-width: 768px) {
+    .gallery-lightbox {
+        padding: 16px;
+    }
+
+    .gallery-lightbox__panel {
+        width: 100%;
+    }
+
+    .gallery-lightbox__image {
+        max-height: 72vh;
+    }
+
+    .gallery-lightbox__close {
+        top: -10px;
+        right: -10px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .gallery-lightbox__nav {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .gallery-lightbox__prev {
+        left: -8px;
+    }
+
+    .gallery-lightbox__next {
+        right: -8px;
+    }
+}
+
+/* ==================== FORMULARIO ====================*/
+.form-confirmacion {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.form-control {
+    border: 2px solid #ddd;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--color-dorado);
+    box-shadow: 0 0 10px rgba(207, 176, 80, 0.2);
+    outline: none;
+}
+
+.form-check-input {
+    accent-color: var(--color-dorado);
+}
+
+/* ==================== TEXTO AGRADECIMIENTO ====================*/
+.texto-agradecimiento {
+    font-size: 20px;
+    color: var(--color-gris);
+    max-width: 700px;
+    margin: 30px auto;
+    line-height: 1.8;
+}
+
+/* ==================== FOOTER ====================*/
+footer {
+    background: var(--color-gris);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer i {
+    color: var(--color-rosa);
+}
+
+/* ==================== RESPONSIVE ====================*/
+@media (max-width: 768px) {
+    .hero .container {
+        padding-left: 10px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+    
+    .subtitulo {
+        font-size: 30px;
+    }
+
+    .fecha-evento {
+        font-size: 18px;
+    }
+    
+    .seccion h2 {
+        font-size: 36px;
+    }
+    
+    #countdown {
+        gap: 10px;
+    }
+    
+    .caja {
+        min-width: 70px;
+        padding: 15px;
+    }
+    
+    .caja span {
+        font-size: 32px;
+    }
+    
+    .form-confirmacion {
+        padding: 20px;
+    }
+}
+
+/* ==================== SCROLL SUAVE ====================*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==================== ANIMACIONES AOS ====================*/
+[data-aos] {
+    opacity: 0;
+    transition-duration: 600ms;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; connect-src 'self'; img-src 'self' data: https:; media-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com https://cdnjs.cloudflare.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
+    <title>Invitación Web - Mi Evento</title>
+
+    <!-- Recursos externos (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== HERO / PORTADA ==================== -->
+    <header class="hero" data-aos="fade-down" data-aos-duration="1500">
+        <div class="container">
+            <h1 data-aos="zoom-in">Ámbar</h1>
+            <p class="subtitulo">¡Mis XV Años!</p>
+            <p class="fecha-evento">Sábado 12 de septiembre 2026 - 9:00 PM</p>
+            
+            <!-- COUNTDOWN -->
+            <div id="countdown">
+                <div class="caja"><span id="days">00</span><small>Días</small></div>
+                <div class="caja"><span id="hours">00</span><small>Horas</small></div>
+                <div class="caja"><span id="minutes">00</span><small>Min</small></div>
+                <div class="caja"><span id="seconds">00</span><small>Seg</small></div>
+            </div>
+
+            <!-- REPRODUCTOR DE MÚSICA -->
+            <div class="mt-4" data-aos="flip-up">
+                <button id="playPauseBtn" class="btn-personal btn-musica">
+                    <i class="fas fa-play"></i> Escuchar canción
+                </button>
+                <audio id="miMusica" loop>
+                    <source src="Musica/311 - Amber (Official Music Video) [SUFSB2plwzM].mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== PERFIL ==================== -->
+    <section class="seccion fondo-claro" data-aos="fade-up">
+        <div class="container">
+            <h2 data-aos="zoom-in">¡Bienvenidos!</h2>
+            <img src="Imagenes/a2.jpeg" alt="Perfil" class="img-perfil" data-aos="zoom-in">
+            <p class="fs-5 texto-bienvenida">
+                La vida se mide en momentos como este, y quiero que seas parte de mi historia. 
+                Te espero para celebrar juntos mis quince años.
+            </p>
+            <div class="mt-4">
+                <h4 class="titulo">Padres:</h4>
+                <p><strong>Viridiana Vela</strong> & <strong>David Dominguez</strong></p>
+                <h4 class="titulo">Chambelán:</h4>
+                <p>Leonardo Acosta Vela</p>
+                <h4 class="titulo">Corte de Honor:</h4>
+                <p>Dante Domínguez, James González, Maximiliano Calleros, Kiev Arana, Diego Acosta, Israel Tapia, Daniel Acosta</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LUGAR Y FECHA ==================== -->
+    <section class="seccion fondo-oscuro" data-aos="fade-up">
+        <div class="container">
+            <h2 data-aos="zoom-in">¿ Dónde y cuándo ?</h2>
+            <p class="fs-3" data-aos="zoom-in"><i class="fas fa-calendar-alt"></i> Sábado 12 de septiembre 2026 - 9:00 PM</p>
+
+            <div class="card-lugar" data-aos="flip-left">
+                <h3 class="titulo">Nuvó (Salón Oníx)</h3>
+                <p><i class="fas fa-map-pin"></i> Av. Ejército Nacional 9781, Del Solar, 32459 Juárez, Chih.</p>
+                <a href="https://maps.app.goo.gl/KQnUJFVWEMk28JpJ6" target="_blank" rel="noopener noreferrer" class="btn-personal">
+                    <i class="fas fa-location-dot"></i> ¿Cómo llegar?
+                </a>
+            </div>
+
+            <!-- BOTÓN AÑADIR AL CALENDARIO -->
+            <div class="mt-4" data-aos="zoom-in">
+                <add-to-calendar-button 
+                    name="Mis XV de Ámbar" 
+                    startdate="2026-09-12" 
+                    starttime="21:00" 
+                    endtime="23:00" 
+                    options="'Google','Apple','Outlook.com'" 
+                    trigger="click" 
+                    description="Recepción en Giardini Jardín de Eventos" 
+                    location="Av. Ejército Nacional 9781, Del Solar, 32459 Juárez, Chih.">
+                </add-to-calendar-button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ITINERARIO ==================== -->
+    <section class="seccion fondo-claro" data-aos="fade-up">
+        <div class="container">
+            <h2 data-aos="zoom-in">Itinerario</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-3" data-aos="flip-up">
+                    <div class="timeline-item"><i class="fas fa-glass-cheers"></i><h4>Recepción</h4><p>9:00 PM</p></div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="flip-up" data-aos-delay="100">
+                    <div class="timeline-item"><i class="fas fa-music"></i><h4>Vals</h4><p>9:30 PM</p></div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="flip-up" data-aos-delay="200">
+                    <div class="timeline-item"><img src="Imagenes/dancing.png" alt="Baile" class="timeline-icon"><h4>Baile</h4><p>10:00 PM</p></div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="flip-up" data-aos-delay="300">
+                    <div class="timeline-item"><i class="fas fa-moon"></i><h4>Despedida</h4><p>1:00 AM</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CÓDIGO DE VESTIMENTA ==================== -->
+    <section class="seccion fondo-oscuro" data-aos="fade-up">
+        <div class="container">
+            <h2 data-aos="zoom-in">Código de vestimenta</h2>
+            <h3 class="titulo" data-aos="zoom-in">"Formal"</h3>
+           
+            <div class="aviso-importante" data-aos="zoom-in">
+                <p><i class="fas fa-exclamation-triangle"></i> <strong>Importante:</strong> No usar ningún tipo de rosa, exclusivo para la Quinceañera.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== REGALO ==================== -->
+    <section class="seccion fondo-claro" data-aos="fade-up">
+        <div class="container">
+            <h2 data-aos="zoom-in">Opción de regalo</h2>
+            <p class="fs-5" data-aos="zoom-in">Tu presencia es el mejor regalo. Si deseas darme un detalle, habrá un <strong>cofre de dinero</strong>.</p>
+            <img src="https://picsum.photos/seed/buzon/400/300" alt="Buzón" class="img-responsive img-buzon" data-aos="flip-left">
+        </div>
+    </section>
+
+    <!-- ==================== GALERÍA ==================== -->
+    <section class="seccion fondo-oscuro" data-aos="fade-up">
+        <div class="container">
+            <h2 data-aos="zoom-in">Galería de fotos</h2>
+            <div class="row g-4 mt-3">
+                <div class="col-6 col-md-4" data-aos="zoom-in-up"><img src="Imagenes/1.jpg" alt="Foto de la galería 1" class="img-responsive card-galeria gallery-trigger" role="button" tabindex="0"></div>
+                <div class="col-6 col-md-4" data-aos="zoom-in-up" data-aos-delay="100"><img src="Imagenes/2.jpg" alt="Foto de la galería 2" class="img-responsive card-galeria gallery-trigger" role="button" tabindex="0"></div>
+                <div class="col-6 col-md-4" data-aos="zoom-in-up" data-aos-delay="200"><img src="Imagenes/3.jpg" alt="Foto de la galería 3" class="img-responsive card-galeria gallery-trigger" role="button" tabindex="0"></div>
+                <div class="col-6 col-md-4" data-aos="zoom-in-up" data-aos-delay="300"><img src="Imagenes/4.jpg" alt="Foto de la galería 4" class="img-responsive card-galeria gallery-trigger" role="button" tabindex="0"></div>
+                <div class="col-6 col-md-4" data-aos="zoom-in-up" data-aos-delay="400"><img src="Imagenes/5.jpg" alt="Foto de la galería 5" class="img-responsive card-galeria gallery-trigger" role="button" tabindex="0"></div>
+                <div class="col-6 col-md-4" data-aos="zoom-in-up" data-aos-delay="500"><img src="Imagenes/11.jpg" alt="Foto de la galería 6" class="img-responsive card-galeria gallery-trigger" role="button" tabindex="0"></div>
+                <div class="col-6 col-md-4" data-aos="zoom-in-up" data-aos-delay="600"><img src="Imagenes/7.jpg" alt="Foto de la galería 7" class="img-responsive card-galeria gallery-trigger" role="button" tabindex="0"></div>
+                <div class="col-6 col-md-4" data-aos="zoom-in-up" data-aos-delay="700"><img src="Imagenes/8.jpg" alt="Foto de la galería 8" class="img-responsive card-galeria gallery-trigger" role="button" tabindex="0"></div>
+                <div class="col-6 col-md-4" data-aos="zoom-in-up" data-aos-delay="800"><img src="Imagenes/9.jpg" alt="Foto de la galería 9" class="img-responsive card-galeria gallery-trigger" role="button" tabindex="0"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="galleryLightbox" class="gallery-lightbox" aria-hidden="true">
+        <div class="gallery-lightbox__backdrop" data-gallery-close></div>
+        <div class="gallery-lightbox__panel" role="dialog" aria-modal="true" aria-label="Galería de fotos ampliada">
+            <button type="button" class="gallery-lightbox__close" data-gallery-close aria-label="Cerrar galería">
+                <i class="fas fa-xmark"></i>
+            </button>
+            <button type="button" class="gallery-lightbox__nav gallery-lightbox__prev" data-gallery-prev aria-label="Foto anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <img id="galleryLightboxImage" class="gallery-lightbox__image" alt="Foto ampliada de la galería">
+            <button type="button" class="gallery-lightbox__nav gallery-lightbox__next" data-gallery-next aria-label="Foto siguiente">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== CONFIRMACIÓN DE ASISTENCIA ==================== -->
+    <section class="seccion fondo-claro" data-aos="fade-up">
+        <div class="container">
+            <h2 data-aos="zoom-in">Confirma tu asistencia</h2>
+            <p class="fs-5" data-aos="zoom-in">¡Nos encantaría contar contigo!</p>
+
+            <form id="confirmForm" class="form-confirmacion" data-aos="flip-up">
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-lg" name="nombre" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="mb-3 d-flex justify-content-center gap-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="asistir" value="1" id="asistirSi" required>
+                        <label class="form-check-label" for="asistirSi">Sí, asisto</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="asistir" value="0" id="asistirNo">
+                        <label class="form-check-label" for="asistirNo">No, asisto</label>
+                    </div>
+                </div>
+
+                <div id="acompanantesDiv" style="display: none;" class="mb-3">
+                    <label class="fw-bold">Cantidad de acompañantes</label>
+                    <div class="d-flex flex-wrap justify-content-center gap-3 mt-2">
+                        <div class="form-check"><input type="radio" name="cantidad" value="1"> 1</div>
+                        <div class="form-check"><input type="radio" name="cantidad" value="2"> 2</div>
+                        <div class="form-check"><input type="radio" name="cantidad" value="3"> 3</div>
+                        <div class="form-check"><input type="radio" name="cantidad" value="4"> 4</div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-personal"><i class="fas fa-check-circle"></i> Confirmar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ==================== AGRADECIMIENTOS ==================== -->
+    <section class="seccion fondo-oscuro gracias" data-aos="fade-up">
+        <div class="container">
+            <h2 data-aos="zoom-in">Gracias...</h2>
+            <p class="fs-4 texto-agradecimiento">
+                Gracias por acompañarme en este día tan especial. Su presencia, cariño y buenos deseos hacen 
+                de este momento un recuerdo inolvidable que guardaré por siempre en mi corazón.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container">
+            <p class="m-0">© Todos los derechos reservados - 2026 - Jorge Mireles </p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Add-to-Calendar (web component) -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2"></script>
+
+    <!-- Script propio -->
+    <script src="03-script.js"></script>
+</body>
+</html>
