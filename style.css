@@ -504,6 +504,10 @@ footer i {
         padding-left: 10px;
     }
 
+    .hero {
+        background-position: 50% 30%;
+    }
+
     .hero h1 {
         font-size: 58px;
     }
@@ -521,12 +525,28 @@ footer i {
     }
     
     #countdown {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 92px));
         gap: 10px;
+        width: 100%;
+        max-width: 210px;
+        margin-left: 0;
+        margin-right: auto;
+        justify-content: start;
     }
     
     .caja {
-        min-width: 70px;
-        padding: 15px;
+        min-width: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .caja span {
+        font-size: 24px;
+    }
+
+    .caja small {
+        font-size: 12px;
     }
     
     .caja span {

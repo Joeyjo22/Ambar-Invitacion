@@ -243,6 +243,11 @@ body{font-family:'Playfair Display', serif;background:var(--bg-dark);color:var(-
 
 @media (max-width:768px){
     .dark-mode .hero .container{padding-left:10px}
+    .dark-mode .hero{background-position:0% 100%}
+    .dark-mode #countdown{display:grid;grid-template-columns:repeat(2,minmax(0,92px));gap:10px;width:100%;max-width:210px;margin-left:0;margin-right:auto;justify-content:start}
+    .dark-mode .caja{min-width:0;width:100%;padding:10px}
+    .dark-mode .caja span{font-size:24px}
+    .dark-mode .caja small{font-size:12px}
     .dark-mode .hero h1{font-size:48px}
     .dark-mode .subtitulo{font-size:22px}
     .dark-mode .seccion h2{font-size:32px}
